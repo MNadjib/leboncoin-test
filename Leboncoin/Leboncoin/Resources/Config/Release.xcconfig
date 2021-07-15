@@ -1,0 +1,14 @@
+//
+//  Release.xcconfig
+//  Leboncoin
+//
+//  Created by Nadjib Bellouni on 14/07/2021.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+CONFIG = Release
+SERVERURL = https:/\/\raw.githubusercontent.com/\leboncoin/\paperclip/\master/\
+DISPLAYNAME = Leboncoin
+ENABLELOG = 1
