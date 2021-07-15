@@ -1,0 +1,14 @@
+//
+//  Debug.xcconfig
+//  Leboncoin
+//
+//  Created by Nadjib Bellouni on 14/07/2021.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+CONFIG = Debug
+SERVERURL = https:/\/\raw.githubusercontent.com/\leboncoin/\paperclip/\master/\
+DISPLAYNAME = Leboncoin Debug
+ENABLELOG = 1
