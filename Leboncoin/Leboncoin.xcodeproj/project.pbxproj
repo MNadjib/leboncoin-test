@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF193A9526A0E0BD00951E4E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF193A9426A0E0BD00951E4E /* Endpoint.swift */; };
+		FF193A9D26A0E0EC00951E4E /* EndpointCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF193A9C26A0E0EC00951E4E /* EndpointCases.swift */; };
+		FF193AA226A0E13200951E4E /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF193AA126A0E13200951E4E /* Cancellable.swift */; };
+		FF193AA726A0E29E00951E4E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF193AA626A0E29E00951E4E /* Localizable.strings */; };
+		FF193AAC26A0E51000951E4E /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF193AAB26A0E51000951E4E /* NetworkProvider.swift */; };
+		FF193AB326A0EC7300951E4E /* CategoryMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF193AB226A0EC7300951E4E /* CategoryMapping.swift */; };
+		FF193AB926A0ECD800951E4E /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF193AB826A0ECD800951E4E /* Error.swift */; };
+		FF193ABE26A0ED4000951E4E /* ClassifiedAdMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF193ABD26A0ED4000951E4E /* ClassifiedAdMapping.swift */; };
+		FF378A5726A2363B00FF6B5A /* ImagesURLMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378A5626A2363B00FF6B5A /* ImagesURLMapping.swift */; };
+		FF378A6326A23C6A00FF6B5A /* ClassifiedAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378A6226A23C6A00FF6B5A /* ClassifiedAd.swift */; };
+		FF378A7926A2403800FF6B5A /* ClassifiedAdsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378A7826A2403800FF6B5A /* ClassifiedAdsRepository.swift */; };
+		FF378A8126A249AB00FF6B5A /* CategoriesRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378A8026A249AB00FF6B5A /* CategoriesRepositories.swift */; };
+		FF378A8626A2E22D00FF6B5A /* ImagesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378A8526A2E22D00FF6B5A /* ImagesRepository.swift */; };
+		FF378A8C26A2E78C00FF6B5A /* PClassifiedAdsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378A8B26A2E78C00FF6B5A /* PClassifiedAdsRepository.swift */; };
+		FF378A9426A2E7C300FF6B5A /* PCategoriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378A9326A2E7C300FF6B5A /* PCategoriesRepository.swift */; };
+		FF378A9926A2E9FD00FF6B5A /* PImagesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378A9826A2E9FD00FF6B5A /* PImagesRepository.swift */; };
+		FF378AA226A36F2000FF6B5A /* RetrieveClassifiedAdsUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378AA126A36F2000FF6B5A /* RetrieveClassifiedAdsUseCases.swift */; };
 		FF805890269F89A200154E37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF80588F269F89A200154E37 /* AppDelegate.swift */; };
 		FF805899269F89A400154E37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF805898269F89A400154E37 /* Assets.xcassets */; };
 		FF80589C269F89A400154E37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF80589A269F89A400154E37 /* LaunchScreen.storyboard */; };
@@ -37,6 +54,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF193A9426A0E0BD00951E4E /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		FF193A9C26A0E0EC00951E4E /* EndpointCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointCases.swift; sourceTree = "<group>"; };
+		FF193AA126A0E13200951E4E /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
+		FF193AA626A0E29E00951E4E /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		FF193AAB26A0E51000951E4E /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		FF193AB226A0EC7300951E4E /* CategoryMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMapping.swift; sourceTree = "<group>"; };
+		FF193AB826A0ECD800951E4E /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		FF193ABD26A0ED4000951E4E /* ClassifiedAdMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdMapping.swift; sourceTree = "<group>"; };
+		FF378A5626A2363B00FF6B5A /* ImagesURLMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesURLMapping.swift; sourceTree = "<group>"; };
+		FF378A6226A23C6A00FF6B5A /* ClassifiedAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAd.swift; sourceTree = "<group>"; };
+		FF378A7826A2403800FF6B5A /* ClassifiedAdsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdsRepository.swift; sourceTree = "<group>"; };
+		FF378A8026A249AB00FF6B5A /* CategoriesRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesRepositories.swift; sourceTree = "<group>"; };
+		FF378A8526A2E22D00FF6B5A /* ImagesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesRepository.swift; sourceTree = "<group>"; };
+		FF378A8B26A2E78C00FF6B5A /* PClassifiedAdsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PClassifiedAdsRepository.swift; sourceTree = "<group>"; };
+		FF378A9326A2E7C300FF6B5A /* PCategoriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCategoriesRepository.swift; sourceTree = "<group>"; };
+		FF378A9826A2E9FD00FF6B5A /* PImagesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PImagesRepository.swift; sourceTree = "<group>"; };
+		FF378AA126A36F2000FF6B5A /* RetrieveClassifiedAdsUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveClassifiedAdsUseCases.swift; sourceTree = "<group>"; };
 		FF80588C269F89A200154E37 /* Leboncoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Leboncoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF80588F269F89A200154E37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF805898269F89A400154E37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,6 +116,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF193A9326A0D08600951E4E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FF193A9426A0E0BD00951E4E /* Endpoint.swift */,
+				FF193A9C26A0E0EC00951E4E /* EndpointCases.swift */,
+				FF193AA126A0E13200951E4E /* Cancellable.swift */,
+				FF193AAB26A0E51000951E4E /* NetworkProvider.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FF193AB026A0EB7D00951E4E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FF193AB726A0EC7A00951E4E /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FF193AB126A0EBD200951E4E /* Mapping */ = {
+			isa = PBXGroup;
+			children = (
+				FF193AB226A0EC7300951E4E /* CategoryMapping.swift */,
+				FF193ABD26A0ED4000951E4E /* ClassifiedAdMapping.swift */,
+				FF378A5626A2363B00FF6B5A /* ImagesURLMapping.swift */,
+			);
+			path = Mapping;
+			sourceTree = "<group>";
+		};
+		FF193AB726A0EC7A00951E4E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FF193AB826A0ECD800951E4E /* Error.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FF378A6126A23C4600FF6B5A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FF378A6226A23C6A00FF6B5A /* ClassifiedAd.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FF378A6F26A23CC400FF6B5A /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				FF378A7826A2403800FF6B5A /* ClassifiedAdsRepository.swift */,
+				FF378A8026A249AB00FF6B5A /* CategoriesRepositories.swift */,
+				FF378A8526A2E22D00FF6B5A /* ImagesRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		FF378A8A26A2E3E400FF6B5A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FF378A8B26A2E78C00FF6B5A /* PClassifiedAdsRepository.swift */,
+				FF378A9326A2E7C300FF6B5A /* PCategoriesRepository.swift */,
+				FF378A9826A2E9FD00FF6B5A /* PImagesRepository.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FF378AA026A36DE800FF6B5A /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				FF378AA126A36F2000FF6B5A /* RetrieveClassifiedAdsUseCases.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 		FF805883269F89A200154E37 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +212,7 @@
 		FF80588E269F89A200154E37 /* Leboncoin */ = {
 			isa = PBXGroup;
 			children = (
+				FF193AB026A0EB7D00951E4E /* Common */,
 				FF8058C2269F89B100154E37 /* Application */,
 				FF8058EC269F922500154E37 /* Presentation */,
 				FF8058ED269F924100154E37 /* Domain */,
@@ -149,6 +257,7 @@
 				FF80589D269F89A400154E37 /* Info.plist */,
 				FF80589A269F89A400154E37 /* LaunchScreen.storyboard */,
 				FF805898269F89A400154E37 /* Assets.xcassets */,
+				FF193AA626A0E29E00951E4E /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -173,6 +282,9 @@
 		FF8058ED269F924100154E37 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				FF378AA026A36DE800FF6B5A /* UseCases */,
+				FF378A8A26A2E3E400FF6B5A /* Protocols */,
+				FF378A6126A23C4600FF6B5A /* Models */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -180,6 +292,9 @@
 		FF8058EE269F924E00154E37 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				FF378A6F26A23CC400FF6B5A /* Repositories */,
+				FF193AB126A0EBD200951E4E /* Mapping */,
+				FF193A9326A0D08600951E4E /* Network */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -322,6 +437,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF80589C269F89A400154E37 /* LaunchScreen.storyboard in Resources */,
+				FF193AA726A0E29E00951E4E /* Localizable.strings in Resources */,
 				FF805899269F89A400154E37 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,12 +463,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF193AA226A0E13200951E4E /* Cancellable.swift in Sources */,
+				FF378A6326A23C6A00FF6B5A /* ClassifiedAd.swift in Sources */,
+				FF378A7926A2403800FF6B5A /* ClassifiedAdsRepository.swift in Sources */,
+				FF193A9526A0E0BD00951E4E /* Endpoint.swift in Sources */,
+				FF378A9926A2E9FD00FF6B5A /* PImagesRepository.swift in Sources */,
+				FF378AA226A36F2000FF6B5A /* RetrieveClassifiedAdsUseCases.swift in Sources */,
+				FF378A8C26A2E78C00FF6B5A /* PClassifiedAdsRepository.swift in Sources */,
 				FF8058D1269F8D0100154E37 /* AppEnvironments.swift in Sources */,
+				FF378A8126A249AB00FF6B5A /* CategoriesRepositories.swift in Sources */,
 				FF8058F9269FA10F00154E37 /* ClassifiedAdsViewModel.swift in Sources */,
+				FF193AB926A0ECD800951E4E /* Error.swift in Sources */,
 				FF805890269F89A200154E37 /* AppDelegate.swift in Sources */,
 				FF805901269FA14300154E37 /* ClassifiedAdsCoordinator.swift in Sources */,
+				FF378A8626A2E22D00FF6B5A /* ImagesRepository.swift in Sources */,
+				FF193ABE26A0ED4000951E4E /* ClassifiedAdMapping.swift in Sources */,
+				FF378A9426A2E7C300FF6B5A /* PCategoriesRepository.swift in Sources */,
 				FF8058E5269F918F00154E37 /* AppAppearances.swift in Sources */,
 				FF8058F3269F9A8400154E37 /* ClassifiedAdsViewController.swift in Sources */,
+				FF378A5726A2363B00FF6B5A /* ImagesURLMapping.swift in Sources */,
+				FF193A9D26A0E0EC00951E4E /* EndpointCases.swift in Sources */,
+				FF193AAC26A0E51000951E4E /* NetworkProvider.swift in Sources */,
+				FF193AB326A0EC7300951E4E /* CategoryMapping.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
