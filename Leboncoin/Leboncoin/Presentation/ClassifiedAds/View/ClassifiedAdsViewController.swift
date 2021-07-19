@@ -57,6 +57,7 @@ class ClassifiedAdsViewController: UIViewController,AlertController {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = localize("search")
+        
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = true
         definesPresentationContext = true
@@ -79,6 +80,10 @@ extension ClassifiedAdsViewController: UITableViewDelegate, UITableViewDataSourc
             return cell
         }
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.selectRow(indexPath)
     }
 }
 

@@ -30,6 +30,7 @@ class ClassifiedAdTableViewCell: UITableViewCell {
     }
     
     private func setupView() {
+        accessoryType = .disclosureIndicator
         setupImageView()
         setupTitleLabel()
         setupUrgentIcon()
@@ -38,51 +39,55 @@ class ClassifiedAdTableViewCell: UITableViewCell {
         setupPriceLabel()
     }
     
+    private var safeArea: UILayoutGuide {
+        contentView.safeAreaLayoutGuide
+    }
+    
     private func setupImageView() {
-        addSubview(adImageView)
-        adImageView.topAnchor.constraint(equalTo: topAnchor, constant: 8.0).isActive = true
-        adImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8.0).isActive = true
+        contentView.addSubview(adImageView)
+        adImageView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 8.0).isActive = true
+        adImageView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 8.0).isActive = true
         adImageView.widthAnchor.constraint(equalToConstant: 60).isActive = true
         adImageView.heightAnchor.constraint(equalToConstant: 60).isActive = true
     }
     
     private func setupTitleLabel() {
-        addSubview(titleLabel)
-        titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8.0).isActive = true
+        contentView.addSubview(titleLabel)
+        titleLabel.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 8.0).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: adImageView.trailingAnchor, constant: 8.0).isActive = true
     }
     
     private func setupCategoryLabel () {
-        addSubview(categoryLabel)
+        contentView.addSubview(categoryLabel)
         categoryLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8.0).isActive = true
         categoryLabel.leadingAnchor.constraint(equalTo: adImageView.trailingAnchor, constant: 8.0).isActive = true
-        categoryLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8.0).isActive = true
+        categoryLabel.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -8.0).isActive = true
     }
     
     private func setupUrgentIcon() {
-        addSubview(urgentIcon)
-        urgentIcon.topAnchor.constraint(equalTo: topAnchor, constant: 8.0).isActive = true
+        contentView.addSubview(urgentIcon)
+        urgentIcon.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 8.0).isActive = true
         urgentIcon.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 8.0).isActive = true
-        urgentIcon.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8.0).isActive = true
+        urgentIcon.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -8.0).isActive = true
         urgentIcon.widthAnchor.constraint(equalToConstant: 18).isActive = true
         urgentIcon.heightAnchor.constraint(equalToConstant:18).isActive = true
         
     }
     
     private func setupDateLabel () {
-        addSubview(dateLabel)
+        contentView.addSubview(dateLabel)
         dateLabel.topAnchor.constraint(equalTo: categoryLabel.bottomAnchor, constant: 8.0).isActive = true
-        dateLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8.0).isActive = true
+        dateLabel.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -8.0).isActive = true
         dateLabel.leadingAnchor.constraint(equalTo: adImageView.trailingAnchor, constant: 8.0).isActive = true
         dateLabel.widthAnchor.constraint(equalToConstant:80).isActive = true
     }
     
     private func setupPriceLabel () {
-        addSubview(priceLabel)
+        contentView.addSubview(priceLabel)
         priceLabel.topAnchor.constraint(equalTo: categoryLabel.bottomAnchor, constant: 8.0).isActive = true
-        priceLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8.0).isActive = true
+        priceLabel.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -8.0).isActive = true
         priceLabel.leadingAnchor.constraint(equalTo: dateLabel.trailingAnchor, constant: 8.0).isActive = true
-        priceLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8.0).isActive = true
+        priceLabel.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -8.0).isActive = true
     }
     
     private var adImageView: ImageView = {
@@ -138,7 +143,7 @@ class ClassifiedAdTableViewCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
-        label.font = .italicSystemFont(ofSize: 11)
+        label.font = .systemFont(ofSize: 11)
         label.textColor = .darkGray
         label.text = "Date"
         return label

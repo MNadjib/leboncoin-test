@@ -45,6 +45,10 @@
 		FF8058F3269F9A8400154E37 /* ClassifiedAdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8058F2269F9A8400154E37 /* ClassifiedAdsViewController.swift */; };
 		FF8058F9269FA10F00154E37 /* ClassifiedAdsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8058F8269FA10F00154E37 /* ClassifiedAdsViewModel.swift */; };
 		FF805901269FA14300154E37 /* ClassifiedAdsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF805900269FA14300154E37 /* ClassifiedAdsCoordinator.swift */; };
+		FFC96EA326A5ADF400850078 /* ClassifiedAdDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC96EA226A5ADF400850078 /* ClassifiedAdDetailsViewController.swift */; };
+		FFC96EA826A5AECB00850078 /* ClassifiedAdDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC96EA726A5AECB00850078 /* ClassifiedAdDetailsView.swift */; };
+		FFC96EAD26A5AFE400850078 /* ClassifiedAdDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC96EAC26A5AFE400850078 /* ClassifiedAdDetailsViewModel.swift */; };
+		FFC96EB226A5B00100850078 /* ClassifiedAdDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC96EB126A5B00100850078 /* ClassifiedAdDetailsCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +115,10 @@
 		FF8058F2269F9A8400154E37 /* ClassifiedAdsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdsViewController.swift; sourceTree = "<group>"; };
 		FF8058F8269FA10F00154E37 /* ClassifiedAdsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdsViewModel.swift; sourceTree = "<group>"; };
 		FF805900269FA14300154E37 /* ClassifiedAdsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdsCoordinator.swift; sourceTree = "<group>"; };
+		FFC96EA226A5ADF400850078 /* ClassifiedAdDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdDetailsViewController.swift; sourceTree = "<group>"; };
+		FFC96EA726A5AECB00850078 /* ClassifiedAdDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdDetailsView.swift; sourceTree = "<group>"; };
+		FFC96EAC26A5AFE400850078 /* ClassifiedAdDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdDetailsViewModel.swift; sourceTree = "<group>"; };
+		FFC96EB126A5B00100850078 /* ClassifiedAdDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdDetailsCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +256,7 @@
 		FF378AF226A5794C00FF6B5A /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				FFC96EB126A5B00100850078 /* ClassifiedAdDetailsCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -255,6 +264,7 @@
 		FF378AF626A57D5000FF6B5A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				FFC96EAC26A5AFE400850078 /* ClassifiedAdDetailsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -262,6 +272,8 @@
 		FF378AF726A57D6A00FF6B5A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FFC96EA226A5ADF400850078 /* ClassifiedAdDetailsViewController.swift */,
+				FFC96EA726A5AECB00850078 /* ClassifiedAdDetailsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -548,16 +560,20 @@
 				FF378ADA26A4B17000FF6B5A /* ClassifiedAdViewModel.swift in Sources */,
 				FF193AA226A0E13200951E4E /* Cancellable.swift in Sources */,
 				FF378A6326A23C6A00FF6B5A /* ClassifiedAd.swift in Sources */,
+				FFC96EA826A5AECB00850078 /* ClassifiedAdDetailsView.swift in Sources */,
 				FF378A7926A2403800FF6B5A /* ClassifiedAdsRepository.swift in Sources */,
+				FFC96EB226A5B00100850078 /* ClassifiedAdDetailsCoordinator.swift in Sources */,
 				FF193A9526A0E0BD00951E4E /* Endpoint.swift in Sources */,
 				FF378A9926A2E9FD00FF6B5A /* PImagesRepository.swift in Sources */,
 				FF378AA226A36F2000FF6B5A /* RetrieveClassifiedAdsUseCases.swift in Sources */,
 				FF378AED26A4DA0100FF6B5A /* Category.swift in Sources */,
 				FF378A8C26A2E78C00FF6B5A /* PClassifiedAdsRepository.swift in Sources */,
+				FFC96EAD26A5AFE400850078 /* ClassifiedAdDetailsViewModel.swift in Sources */,
 				FF8058D1269F8D0100154E37 /* AppEnvironments.swift in Sources */,
 				FF378A8126A249AB00FF6B5A /* CategoriesRepository.swift in Sources */,
 				FF8058F9269FA10F00154E37 /* ClassifiedAdsViewModel.swift in Sources */,
 				FF193AB926A0ECD800951E4E /* Error.swift in Sources */,
+				FFC96EA326A5ADF400850078 /* ClassifiedAdDetailsViewController.swift in Sources */,
 				FF378ABB26A38BD400FF6B5A /* ReusableView.swift in Sources */,
 				FF805890269F89A200154E37 /* AppDelegate.swift in Sources */,
 				FF805901269FA14300154E37 /* ClassifiedAdsCoordinator.swift in Sources */,

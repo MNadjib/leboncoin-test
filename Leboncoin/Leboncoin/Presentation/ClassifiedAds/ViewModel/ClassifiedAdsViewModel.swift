@@ -31,6 +31,7 @@ protocol ClassifiedAdsViewModelInput: class {
     func item(for indexPath: IndexPath) -> ClassifiedAdViewModel
     func categoriesTitle() -> [String]
     func filterAds(_ status: AdStatus, _ query: String?)
+    func selectRow(_ index: IndexPath)
 }
 
 class ClassifiedAdsViewModel {
@@ -39,9 +40,11 @@ class ClassifiedAdsViewModel {
     private var items: [ClassifiedAdViewModel] = []
     private var filtredItems: [ClassifiedAdViewModel] = []
     private var categories:[Category] = []
+    private var coordinator:ClassifiedAdsCoordinatorInput
     
-    init( useCase: ClassifiedAdsUseCases) {
+    init(_ useCase: ClassifiedAdsUseCases, coordinator: ClassifiedAdsCoordinatorInput) {
         self.useCase = useCase
+        self.coordinator = coordinator
     }
     
 }
@@ -89,5 +92,10 @@ extension ClassifiedAdsViewModel: ClassifiedAdsViewModelInput {
                     ad.title.range(of: query, options: [.diacriticInsensitive, .caseInsensitive]) != nil ||
                     ad.categoryName.range(of: query, options: [.diacriticInsensitive, .caseInsensitive]) != nil)
         }
+    }
+    
+    func selectRow(_ index: IndexPath) {
+        let item = filtredItems[index.row]
+        coordinator.presentClassifiedAdDetails(item)
     }
 }

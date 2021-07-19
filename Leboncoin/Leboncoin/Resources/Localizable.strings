@@ -12,3 +12,5 @@
 "all" = "Tous";
 "urgent" = "Urgent";
 "notUrgent" = "Non urgent";
+"published" = "Publié le";
+"ad_urgent" = "Annonce urgente à saisir rapidement !";

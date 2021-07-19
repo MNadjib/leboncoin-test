@@ -30,5 +30,14 @@ let mediumDateFormatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.dateStyle = .medium
     formatter.timeStyle = .none
+    formatter.locale = Locale.current
+    return formatter
+}()
+
+let longDateFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateStyle = .medium
+    formatter.timeStyle = .medium
+    formatter.locale = Locale.current
     return formatter
 }()

@@ -29,6 +29,13 @@ struct ClassifiedAdViewModel {
         }
         return ""
     }
+    
+    var publishedDateString: String {
+        if let date = creationDate {
+            return String("\(localize("published")) \(longDateFormatter.string(from: date))")
+        }
+        return ""
+    }
 }
 
 extension ClassifiedAdViewModel {
@@ -40,6 +47,7 @@ extension ClassifiedAdViewModel {
                 return false
             } else {
                 return true
+                
             }
         } else {
             return lhs.isUrgent
