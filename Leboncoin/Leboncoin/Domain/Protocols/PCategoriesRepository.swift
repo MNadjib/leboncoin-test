@@ -8,8 +8,8 @@
 import UIKit
 
 protocol PCategoriesRepository {
-    typealias Completion = ( Swift.Result<[Category], Error>) -> Void
-    
+
+    typealias Completion = (Result<[Category], Error>) -> Void
     @discardableResult
-    func retrieveCategories(_ completion: @escaping Completion) -> Cancellable
+    func retrieveData(_ completion: @escaping Completion) -> Cancellable?
 }

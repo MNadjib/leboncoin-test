@@ -38,6 +38,9 @@ protocol Endpoint {
 
 extension Endpoint {
     var url: URL {
-        return baseURL.appendingPathComponent(path)
+        if !path.isEmpty {
+            return baseURL.appendingPathComponent(path)
+        }
+        return baseURL
     }
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum Error: Swift.Error {
+enum Error: Swift.Error, Equatable {
     case noNetwork
     case invalidURL
     case httpError400
@@ -18,6 +18,7 @@ enum Error: Swift.Error {
     case httpError408
     case httpError500
     case otherServerError(_ description: String)
+    case jsonDecodingError(_ description: String)
     case defaultError
     
     static func error(_ code: Int) -> Error {

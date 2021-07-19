@@ -18,12 +18,23 @@
 		FF378A5726A2363B00FF6B5A /* ImagesURLMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378A5626A2363B00FF6B5A /* ImagesURLMapping.swift */; };
 		FF378A6326A23C6A00FF6B5A /* ClassifiedAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378A6226A23C6A00FF6B5A /* ClassifiedAd.swift */; };
 		FF378A7926A2403800FF6B5A /* ClassifiedAdsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378A7826A2403800FF6B5A /* ClassifiedAdsRepository.swift */; };
-		FF378A8126A249AB00FF6B5A /* CategoriesRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378A8026A249AB00FF6B5A /* CategoriesRepositories.swift */; };
+		FF378A8126A249AB00FF6B5A /* CategoriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378A8026A249AB00FF6B5A /* CategoriesRepository.swift */; };
 		FF378A8626A2E22D00FF6B5A /* ImagesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378A8526A2E22D00FF6B5A /* ImagesRepository.swift */; };
 		FF378A8C26A2E78C00FF6B5A /* PClassifiedAdsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378A8B26A2E78C00FF6B5A /* PClassifiedAdsRepository.swift */; };
 		FF378A9426A2E7C300FF6B5A /* PCategoriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378A9326A2E7C300FF6B5A /* PCategoriesRepository.swift */; };
 		FF378A9926A2E9FD00FF6B5A /* PImagesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378A9826A2E9FD00FF6B5A /* PImagesRepository.swift */; };
 		FF378AA226A36F2000FF6B5A /* RetrieveClassifiedAdsUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378AA126A36F2000FF6B5A /* RetrieveClassifiedAdsUseCases.swift */; };
+		FF378AB026A3879D00FF6B5A /* ClassifiedAdsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378AAF26A3879D00FF6B5A /* ClassifiedAdsView.swift */; };
+		FF378AB526A38A2100FF6B5A /* ClassifiedAdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378AB426A38A2100FF6B5A /* ClassifiedAdTableViewCell.swift */; };
+		FF378ABB26A38BD400FF6B5A /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378ABA26A38BD400FF6B5A /* ReusableView.swift */; };
+		FF378AC026A38C5700FF6B5A /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378ABF26A38C5700FF6B5A /* UITableView.swift */; };
+		FF378AC526A395D200FF6B5A /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378AC426A395D200FF6B5A /* ImageView.swift */; };
+		FF378ACA26A39D2900FF6B5A /* NetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378AC926A39D2900FF6B5A /* NetworkStatus.swift */; };
+		FF378AD026A39D9300FF6B5A /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF378ACF26A39D9300FF6B5A /* Network.framework */; };
+		FF378AD226A3A5C800FF6B5A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378AD126A3A5C800FF6B5A /* Helper.swift */; };
+		FF378ADA26A4B17000FF6B5A /* ClassifiedAdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378AD926A4B17000FF6B5A /* ClassifiedAdViewModel.swift */; };
+		FF378AE226A4D1A500FF6B5A /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378AE126A4D1A500FF6B5A /* AlertController.swift */; };
+		FF378AED26A4DA0100FF6B5A /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF378AEC26A4DA0100FF6B5A /* Category.swift */; };
 		FF805890269F89A200154E37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF80588F269F89A200154E37 /* AppDelegate.swift */; };
 		FF805899269F89A400154E37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF805898269F89A400154E37 /* Assets.xcassets */; };
 		FF80589C269F89A400154E37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF80589A269F89A400154E37 /* LaunchScreen.storyboard */; };
@@ -65,12 +76,23 @@
 		FF378A5626A2363B00FF6B5A /* ImagesURLMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesURLMapping.swift; sourceTree = "<group>"; };
 		FF378A6226A23C6A00FF6B5A /* ClassifiedAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAd.swift; sourceTree = "<group>"; };
 		FF378A7826A2403800FF6B5A /* ClassifiedAdsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdsRepository.swift; sourceTree = "<group>"; };
-		FF378A8026A249AB00FF6B5A /* CategoriesRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesRepositories.swift; sourceTree = "<group>"; };
+		FF378A8026A249AB00FF6B5A /* CategoriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesRepository.swift; sourceTree = "<group>"; };
 		FF378A8526A2E22D00FF6B5A /* ImagesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesRepository.swift; sourceTree = "<group>"; };
 		FF378A8B26A2E78C00FF6B5A /* PClassifiedAdsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PClassifiedAdsRepository.swift; sourceTree = "<group>"; };
 		FF378A9326A2E7C300FF6B5A /* PCategoriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCategoriesRepository.swift; sourceTree = "<group>"; };
 		FF378A9826A2E9FD00FF6B5A /* PImagesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PImagesRepository.swift; sourceTree = "<group>"; };
 		FF378AA126A36F2000FF6B5A /* RetrieveClassifiedAdsUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveClassifiedAdsUseCases.swift; sourceTree = "<group>"; };
+		FF378AAF26A3879D00FF6B5A /* ClassifiedAdsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdsView.swift; sourceTree = "<group>"; };
+		FF378AB426A38A2100FF6B5A /* ClassifiedAdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdTableViewCell.swift; sourceTree = "<group>"; };
+		FF378ABA26A38BD400FF6B5A /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		FF378ABF26A38C5700FF6B5A /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		FF378AC426A395D200FF6B5A /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		FF378AC926A39D2900FF6B5A /* NetworkStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatus.swift; sourceTree = "<group>"; };
+		FF378ACF26A39D9300FF6B5A /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
+		FF378AD126A3A5C800FF6B5A /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		FF378AD926A4B17000FF6B5A /* ClassifiedAdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdViewModel.swift; sourceTree = "<group>"; };
+		FF378AE126A4D1A500FF6B5A /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		FF378AEC26A4DA0100FF6B5A /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		FF80588C269F89A200154E37 /* Leboncoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Leboncoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF80588F269F89A200154E37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF805898269F89A400154E37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF378AD026A39D9300FF6B5A /* Network.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +153,7 @@
 		FF193AB026A0EB7D00951E4E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				FF378AB926A38BBA00FF6B5A /* Utils */,
 				FF193AB726A0EC7A00951E4E /* Extensions */,
 			);
 			path = Common;
@@ -149,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				FF193AB826A0ECD800951E4E /* Error.swift */,
+				FF378ABF26A38C5700FF6B5A /* UITableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -157,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				FF378A6226A23C6A00FF6B5A /* ClassifiedAd.swift */,
+				FF378AEC26A4DA0100FF6B5A /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,7 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				FF378A7826A2403800FF6B5A /* ClassifiedAdsRepository.swift */,
-				FF378A8026A249AB00FF6B5A /* CategoriesRepositories.swift */,
+				FF378A8026A249AB00FF6B5A /* CategoriesRepository.swift */,
 				FF378A8526A2E22D00FF6B5A /* ImagesRepository.swift */,
 			);
 			path = Repositories;
@@ -189,6 +215,57 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
+		FF378AB926A38BBA00FF6B5A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FF378ABA26A38BD400FF6B5A /* ReusableView.swift */,
+				FF378AC426A395D200FF6B5A /* ImageView.swift */,
+				FF378AC926A39D2900FF6B5A /* NetworkStatus.swift */,
+				FF378AD126A3A5C800FF6B5A /* Helper.swift */,
+				FF378AE126A4D1A500FF6B5A /* AlertController.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FF378ACE26A39D9300FF6B5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF378ACF26A39D9300FF6B5A /* Network.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF378AF126A5791A00FF6B5A /* ClassifiedAdDetails */ = {
+			isa = PBXGroup;
+			children = (
+				FF378AF726A57D6A00FF6B5A /* View */,
+				FF378AF626A57D5000FF6B5A /* ViewModel */,
+				FF378AF226A5794C00FF6B5A /* Coordinator */,
+			);
+			path = ClassifiedAdDetails;
+			sourceTree = "<group>";
+		};
+		FF378AF226A5794C00FF6B5A /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		FF378AF626A57D5000FF6B5A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FF378AF726A57D6A00FF6B5A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FF805883269F89A200154E37 = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +273,7 @@
 				FF8058A5269F89A500154E37 /* LeboncoinTests */,
 				FF8058B0269F89A500154E37 /* LeboncoinUITests */,
 				FF80588D269F89A200154E37 /* Products */,
+				FF378ACE26A39D9300FF6B5A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,11 +290,11 @@
 		FF80588E269F89A200154E37 /* Leboncoin */ = {
 			isa = PBXGroup;
 			children = (
-				FF193AB026A0EB7D00951E4E /* Common */,
 				FF8058C2269F89B100154E37 /* Application */,
 				FF8058EC269F922500154E37 /* Presentation */,
 				FF8058ED269F924100154E37 /* Domain */,
 				FF8058EE269F924E00154E37 /* Data */,
+				FF193AB026A0EB7D00951E4E /* Common */,
 				FF8058CC269F8AA900154E37 /* Resources */,
 			);
 			path = Leboncoin;
@@ -274,7 +352,8 @@
 		FF8058EC269F922500154E37 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				FF8058EF269F955000154E37 /* ClassifiedAd */,
+				FF378AF126A5791A00FF6B5A /* ClassifiedAdDetails */,
+				FF8058EF269F955000154E37 /* ClassifiedAds */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -299,20 +378,22 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		FF8058EF269F955000154E37 /* ClassifiedAd */ = {
+		FF8058EF269F955000154E37 /* ClassifiedAds */ = {
 			isa = PBXGroup;
 			children = (
 				FF8058F0269F957F00154E37 /* View */,
 				FF8058F1269F959000154E37 /* ViewModel */,
 				FF8058F7269F9EC300154E37 /* Coordinator */,
 			);
-			path = ClassifiedAd;
+			path = ClassifiedAds;
 			sourceTree = "<group>";
 		};
 		FF8058F0269F957F00154E37 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				FF8058F2269F9A8400154E37 /* ClassifiedAdsViewController.swift */,
+				FF378AAF26A3879D00FF6B5A /* ClassifiedAdsView.swift */,
+				FF378AB426A38A2100FF6B5A /* ClassifiedAdTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -321,6 +402,7 @@
 			isa = PBXGroup;
 			children = (
 				FF8058F8269FA10F00154E37 /* ClassifiedAdsViewModel.swift */,
+				FF378AD926A4B17000FF6B5A /* ClassifiedAdViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -463,28 +545,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF378ADA26A4B17000FF6B5A /* ClassifiedAdViewModel.swift in Sources */,
 				FF193AA226A0E13200951E4E /* Cancellable.swift in Sources */,
 				FF378A6326A23C6A00FF6B5A /* ClassifiedAd.swift in Sources */,
 				FF378A7926A2403800FF6B5A /* ClassifiedAdsRepository.swift in Sources */,
 				FF193A9526A0E0BD00951E4E /* Endpoint.swift in Sources */,
 				FF378A9926A2E9FD00FF6B5A /* PImagesRepository.swift in Sources */,
 				FF378AA226A36F2000FF6B5A /* RetrieveClassifiedAdsUseCases.swift in Sources */,
+				FF378AED26A4DA0100FF6B5A /* Category.swift in Sources */,
 				FF378A8C26A2E78C00FF6B5A /* PClassifiedAdsRepository.swift in Sources */,
 				FF8058D1269F8D0100154E37 /* AppEnvironments.swift in Sources */,
-				FF378A8126A249AB00FF6B5A /* CategoriesRepositories.swift in Sources */,
+				FF378A8126A249AB00FF6B5A /* CategoriesRepository.swift in Sources */,
 				FF8058F9269FA10F00154E37 /* ClassifiedAdsViewModel.swift in Sources */,
 				FF193AB926A0ECD800951E4E /* Error.swift in Sources */,
+				FF378ABB26A38BD400FF6B5A /* ReusableView.swift in Sources */,
 				FF805890269F89A200154E37 /* AppDelegate.swift in Sources */,
 				FF805901269FA14300154E37 /* ClassifiedAdsCoordinator.swift in Sources */,
 				FF378A8626A2E22D00FF6B5A /* ImagesRepository.swift in Sources */,
 				FF193ABE26A0ED4000951E4E /* ClassifiedAdMapping.swift in Sources */,
 				FF378A9426A2E7C300FF6B5A /* PCategoriesRepository.swift in Sources */,
 				FF8058E5269F918F00154E37 /* AppAppearances.swift in Sources */,
+				FF378AB526A38A2100FF6B5A /* ClassifiedAdTableViewCell.swift in Sources */,
 				FF8058F3269F9A8400154E37 /* ClassifiedAdsViewController.swift in Sources */,
+				FF378ACA26A39D2900FF6B5A /* NetworkStatus.swift in Sources */,
 				FF378A5726A2363B00FF6B5A /* ImagesURLMapping.swift in Sources */,
 				FF193A9D26A0E0EC00951E4E /* EndpointCases.swift in Sources */,
+				FF378AB026A3879D00FF6B5A /* ClassifiedAdsView.swift in Sources */,
+				FF378AC026A38C5700FF6B5A /* UITableView.swift in Sources */,
+				FF378AC526A395D200FF6B5A /* ImageView.swift in Sources */,
 				FF193AAC26A0E51000951E4E /* NetworkProvider.swift in Sources */,
+				FF378AD226A3A5C800FF6B5A /* Helper.swift in Sources */,
 				FF193AB326A0EC7300951E4E /* CategoryMapping.swift in Sources */,
+				FF378AE226A4D1A500FF6B5A /* AlertController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

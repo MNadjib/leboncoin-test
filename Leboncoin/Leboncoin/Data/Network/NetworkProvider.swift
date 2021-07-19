@@ -12,13 +12,17 @@ class NetworkProvider {
     typealias Completion = ( Swift.Result<Data?, Error>) -> Void
     
     @discardableResult
-    func request(_ endpoint: EndpointCases, _ completion: @escaping Completion) -> Cancellable {
+    func request(_ endpoint: EndpointCases, _ completion: @escaping Completion) -> Cancellable? {
+        
+        if !isNetworkAvailable {
+            completion(.failure(.noNetwork))
+            return nil
+        }
         
         let urlSession = URLSession.shared
         
         var url = endpoint.url
         
-        /// not used in this case
         if let query = endpoint.query {
             var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false)
             var queryItems: [URLQueryItem] = []
@@ -60,5 +64,10 @@ class NetworkProvider {
         }
         task.resume()
         return task
+    }
+    
+    
+    var isNetworkAvailable: Bool {
+        NetworkStatus.shared.connection == .reachable
     }
 }

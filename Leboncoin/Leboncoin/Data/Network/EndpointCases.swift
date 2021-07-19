@@ -10,12 +10,18 @@ import UIKit
 enum EndpointCases {
     case classifiedAds
     case categories
+    case image(urlString: String)
 }
 
 extension EndpointCases: Endpoint {
     
     var baseURL: URL {
-        return URL(string: Environment.serverUrl.value)!
+        switch self {
+        case .image(let urlString):
+            return URL(string: urlString)!
+        default:
+            return URL(string: Environment.serverUrl.value)!
+        }
     }
 
     var path: String {
@@ -24,6 +30,8 @@ extension EndpointCases: Endpoint {
             return "listing.json"
         case .categories:
             return "categories.json"
+        case .image:
+            return ""
         }
     }
     
@@ -32,7 +40,13 @@ extension EndpointCases: Endpoint {
     }
     
     var headers: [String: String]? {
-        return ["Accept": "application/json"]
+        switch self {
+        case .image:
+            return nil
+        default:
+            return ["Accept": "application/json"]
+        }
+        
     }
 
     var query: [String : String]? {

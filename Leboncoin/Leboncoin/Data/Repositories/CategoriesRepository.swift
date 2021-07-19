@@ -1,5 +1,5 @@
 //
-//  ClassifiedAdsRepository.swift
+//  CategoriesRepositories.swift
 //  Leboncoin
 //
 //  Created by Nadjib Bellouni on 17/07/2021.
@@ -7,10 +7,8 @@
 
 import UIKit
 
-class ClassifiedAdsRepository {
-    
-    typealias Completion = ( Swift.Result<[ClassifiedAd], Error>) -> Void
-    
+class CategoriesRepository {
+    typealias Completion = (Result<[Category], Error>) -> Void
     private let provider: NetworkProvider
     
     init(_ provider: NetworkProvider) {
@@ -18,20 +16,20 @@ class ClassifiedAdsRepository {
     }
 }
 
-extension ClassifiedAdsRepository: PClassifiedAdsRepository {
+extension CategoriesRepository: PCategoriesRepository {
     @discardableResult
     func retrieveData(_ completion: @escaping Completion) -> Cancellable? {
-        return provider.request(.classifiedAds) { result in
+        return provider.request(.categories) { result in
             switch result {
             case .success(let data):
                 do {
                     if let data = data {
-                        let adsMapping = try JSONDecoder().decode([ClassifiedAdMapping].self, from: data)
-                        let ads = adsMapping.map { adMapping -> ClassifiedAd in
-                            adMapping.toModel()
+                        let catsMapping = try JSONDecoder().decode([CategoryMapping].self, from: data)
+                        let categories = catsMapping.map { catMapping -> Category in
+                            catMapping.toModel()
                         }
-                        log(ads)
-                        completion(.success(ads))
+                        log(categories)
+                        completion(.success(categories))
                     }
                 } catch let error{
                     log(error.localizedDescription)
@@ -40,10 +38,8 @@ extension ClassifiedAdsRepository: PClassifiedAdsRepository {
         
             case .failure(let error):
                 log(error.localizedDescription)
-                completion(.failure(error) )
+                completion(.failure(error))
             }
         }
     }
 }
-
-

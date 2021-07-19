@@ -5,3 +5,10 @@
   Created by Nadjib Bellouni on 15/07/2021.
   
 */
+
+"ads" = "Annonces";
+"euro" = "€";
+"search" =  "Recherche par nom et/ou par catégorie";
+"all" = "Tous";
+"urgent" = "Urgent";
+"notUrgent" = "Non urgent";

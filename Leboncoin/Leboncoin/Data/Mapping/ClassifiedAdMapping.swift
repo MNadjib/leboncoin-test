@@ -27,4 +27,16 @@ struct ClassifiedAdMapping: Decodable {
         case price
         case title
     }
+    
+    func toModel() -> ClassifiedAd {
+        ClassifiedAd(id: id,
+                     categoryId: categoryId,
+                     categoryName: "",
+                     creationDate: iso8601DateFormatter.date(from: creationDate),
+                     description: description,
+                     imagesUrl: imagesUrl.toModel(),
+                     isUrgent: isUrgent,
+                     price: price,
+                     title: title)
+    }
 }
