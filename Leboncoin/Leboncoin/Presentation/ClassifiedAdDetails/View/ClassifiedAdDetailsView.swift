@@ -33,6 +33,7 @@ class ClassifiedAdDetailsView: UIView {
     }
     
     private func setupView() {
+        setupScrollView()
         setupTitleLabel()
         setupUrgentIcon()
         setupUrgentLabel()
@@ -43,70 +44,94 @@ class ClassifiedAdDetailsView: UIView {
         setupDescriptionTextView()
     }
     
-    func layoutSubviews(for oriention: UIDeviceOrientation) {
+    private func setupScrollView() {
+        addSubview(scrollView)
+        scrollView.addSubview(contentView)
         
+        scrollView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        scrollView.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
+        scrollView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        
+        contentView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor).isActive = true
+        contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
+        contentView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
+        contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
     }
     
     private func setupTitleLabel() {
-        addSubview(titleLabel)
-        titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 8.0).isActive = true
-        titleLabel.leadingAnchor.constraint(equalTo:safeAreaLayoutGuide.leadingAnchor, constant: 8.0).isActive = true
-        titleLabel.trailingAnchor.constraint(equalTo:safeAreaLayoutGuide.trailingAnchor, constant: -8.0).isActive = true
+        contentView.addSubview(titleLabel)
+        titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8.0).isActive = true
+        titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8.0).isActive = true
+        titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant:-8.0).isActive = true
     }
     
     private func setupUrgentIcon() {
-        addSubview(urgentIcon)
+        contentView.addSubview(urgentIcon)
         urgentIcon.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8.0).isActive = true
-        urgentIcon.leadingAnchor.constraint(equalTo:safeAreaLayoutGuide.leadingAnchor, constant: 8.0).isActive = true
+        urgentIcon.leadingAnchor.constraint(equalTo:contentView.leadingAnchor, constant: 8.0).isActive = true
         urgentIcon.widthAnchor.constraint(equalToConstant: 18).isActive = true
         urgentIcon.heightAnchor.constraint(equalToConstant: 18).isActive = true
     }
     
     private func setupUrgentLabel() {
-        addSubview(urgentLabel)
+        contentView.addSubview(urgentLabel)
         urgentLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8.0).isActive = true
         urgentLabel.leadingAnchor.constraint(equalTo:urgentIcon.trailingAnchor, constant: 8.0).isActive = true
-        urgentLabel.trailingAnchor.constraint(equalTo:safeAreaLayoutGuide.trailingAnchor, constant: -8.0).isActive = true
+        urgentLabel.trailingAnchor.constraint(equalTo:contentView.trailingAnchor, constant: -8.0).isActive = true
     }
     
     private func setupImageView() {
-        addSubview(imageView)
+        contentView.addSubview(imageView)
         imageView.topAnchor.constraint(equalTo: urgentLabel.bottomAnchor, constant: 8.0).isActive = true
-        imageView.leadingAnchor.constraint(equalTo:safeAreaLayoutGuide.leadingAnchor, constant: 8.0).isActive = true
-        imageView.trailingAnchor.constraint(equalTo:safeAreaLayoutGuide.trailingAnchor, constant: -8.0).isActive = true
+        imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8.0).isActive = true
+        imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant:-8.0).isActive = true
         imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor, multiplier: 1).isActive = true
     }
     
     private func setupDateLabel() {
-        addSubview(dateLabel)
+        contentView.addSubview(dateLabel)
         dateLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8.0).isActive = true
-        dateLabel.leadingAnchor.constraint(equalTo:safeAreaLayoutGuide.leadingAnchor, constant: 8.0).isActive = true
+        dateLabel.leadingAnchor.constraint(equalTo:contentView.leadingAnchor, constant: 8.0).isActive = true
         dateLabel.widthAnchor.constraint(equalToConstant: 250).isActive = true
     }
     
     private func setupPriceLabel() {
-        addSubview(priceLabel)
+        contentView.addSubview(priceLabel)
         priceLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8.0).isActive = true
         priceLabel.leadingAnchor.constraint(equalTo:dateLabel.leadingAnchor, constant: 8.0).isActive = true
-        priceLabel.trailingAnchor.constraint(equalTo:safeAreaLayoutGuide.trailingAnchor, constant: -8.0).isActive = true
+        priceLabel.trailingAnchor.constraint(equalTo:contentView.trailingAnchor, constant: -8.0).isActive = true
     }
     
     private func setupCategoryLabel() {
-        addSubview(categoryLabel)
+        contentView.addSubview(categoryLabel)
         categoryLabel.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 8.0).isActive = true
-        categoryLabel.leadingAnchor.constraint(equalTo:safeAreaLayoutGuide.leadingAnchor, constant: 8.0).isActive = true
-        categoryLabel.trailingAnchor.constraint(equalTo:safeAreaLayoutGuide.trailingAnchor, constant: -8.0).isActive = true
+        categoryLabel.leadingAnchor.constraint(equalTo:contentView.leadingAnchor, constant: 8.0).isActive = true
+        categoryLabel.trailingAnchor.constraint(equalTo:contentView.trailingAnchor, constant: -8.0).isActive = true
     }
     
     private func setupDescriptionTextView() {
-        addSubview(descirptionTextView)
+        contentView.addSubview(descirptionTextView)
         descirptionTextView.topAnchor.constraint(equalTo: categoryLabel.bottomAnchor, constant: 8.0).isActive = true
-        descirptionTextView.leadingAnchor.constraint(equalTo:safeAreaLayoutGuide.leadingAnchor, constant: 8.0).isActive = true
-        descirptionTextView.trailingAnchor.constraint(equalTo:safeAreaLayoutGuide.trailingAnchor, constant: -8.0).isActive = true
-        
-        descirptionTextView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -8.0).isActive = true
-        
+        descirptionTextView.leadingAnchor.constraint(equalTo:contentView.leadingAnchor, constant: 8.0).isActive = true
+        descirptionTextView.trailingAnchor.constraint(equalTo:contentView.trailingAnchor, constant: -8.0).isActive = true
+        descirptionTextView.bottomAnchor.constraint(equalTo:contentView.bottomAnchor, constant: -8.0).isActive = true
     }
+    
+    let scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.backgroundColor = .clear
+        return scrollView
+    }()
+    
+    let contentView : UIView = {
+
+        let content = UIView()
+        content.translatesAutoresizingMaskIntoConstraints = false
+        content.backgroundColor = UIColor.white
+        return content
+    }()
     
     private var titleLabel: UILabel = {
         let label =  UILabel()
@@ -161,7 +186,7 @@ class ClassifiedAdDetailsView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 1
-        label.font = .systemFont(ofSize: 11)
+        label.font = .systemFont(ofSize: 12)
         label.textColor = .darkGray
         label.text = localize("ad_urgent")
         return label
@@ -182,7 +207,6 @@ class ClassifiedAdDetailsView: UIView {
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.font = .systemFont(ofSize: 12)
         textView.textColor = .darkGray
-        textView.showsVerticalScrollIndicator = true
         textView.text = "description"
         textView.layer.cornerRadius = 8
         textView.layer.borderWidth = 0.2
@@ -190,6 +214,8 @@ class ClassifiedAdDetailsView: UIView {
         textView.textContainerInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         let color: UIColor = .gray
         textView.layer.borderColor = color.cgColor
+        textView.sizeToFit()
+        textView.isScrollEnabled = false
         return textView
     }()
 }

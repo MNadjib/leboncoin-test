@@ -27,6 +27,7 @@ class ClassifiedAdDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         (view as! ClassifiedAdDetailsView).item = viewModel.classifiedAdItem
     }
     
