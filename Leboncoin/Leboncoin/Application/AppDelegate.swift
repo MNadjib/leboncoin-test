@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func setupNetworkMonitoring() {
-        let _ = NetworkStatus.shared.startMonitoring()
+        NetworkStatus.shared.startMonitoring()
     }
 }
 

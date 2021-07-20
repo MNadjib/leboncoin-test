@@ -46,10 +46,14 @@ class ClassifiedAdsViewController: UIViewController,AlertController {
     }
     
     private func loadData () {
+        let loadingView = LoadingView(with: localize("loading"))
+        loadingView.show()
         viewModel.retrieveData { [weak self] in
+            loadingView.hide()
             (self?.view as! ClassifiedAdsView).reloadData()
             self?.searchController.searchBar.scopeButtonTitles = AdStatus.allCases.map({ localize($0.rawValue)})
         } error: {[weak self] error in
+            loadingView.hide()
             self?.showAlert(message: error)
         }
     }

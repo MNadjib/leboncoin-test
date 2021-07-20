@@ -50,6 +50,7 @@
 		FF8D208126A70F7D00583D97 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8D208026A70F7D00583D97 /* CategoriesViewController.swift */; };
 		FF8D208626A70FC200583D97 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8D208526A70FC200583D97 /* CategoriesView.swift */; };
 		FF8D208B26A73BE700583D97 /* ClassifiedAdsSearchQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8D208A26A73BE700583D97 /* ClassifiedAdsSearchQuery.swift */; };
+		FF8D209026A74D3F00583D97 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8D208F26A74D3F00583D97 /* LoadingView.swift */; };
 		FFC96EA326A5ADF400850078 /* ClassifiedAdDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC96EA226A5ADF400850078 /* ClassifiedAdDetailsViewController.swift */; };
 		FFC96EA826A5AECB00850078 /* ClassifiedAdDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC96EA726A5AECB00850078 /* ClassifiedAdDetailsView.swift */; };
 		FFC96EAD26A5AFE400850078 /* ClassifiedAdDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC96EAC26A5AFE400850078 /* ClassifiedAdDetailsViewModel.swift */; };
@@ -125,6 +126,7 @@
 		FF8D208026A70F7D00583D97 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		FF8D208526A70FC200583D97 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
 		FF8D208A26A73BE700583D97 /* ClassifiedAdsSearchQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdsSearchQuery.swift; sourceTree = "<group>"; };
+		FF8D208F26A74D3F00583D97 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		FFC96EA226A5ADF400850078 /* ClassifiedAdDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdDetailsViewController.swift; sourceTree = "<group>"; };
 		FFC96EA726A5AECB00850078 /* ClassifiedAdDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdDetailsView.swift; sourceTree = "<group>"; };
 		FFC96EAC26A5AFE400850078 /* ClassifiedAdDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdDetailsViewModel.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 				FF378AC926A39D2900FF6B5A /* NetworkStatus.swift */,
 				FF378AD126A3A5C800FF6B5A /* Helper.swift */,
 				FF378AE126A4D1A500FF6B5A /* AlertController.swift */,
+				FF8D208F26A74D3F00583D97 /* LoadingView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -609,6 +612,7 @@
 				FF8D207426A70BED00583D97 /* CategoriesCoordinator.swift in Sources */,
 				FF193AA226A0E13200951E4E /* Cancellable.swift in Sources */,
 				FF378A6326A23C6A00FF6B5A /* ClassifiedAd.swift in Sources */,
+				FF8D209026A74D3F00583D97 /* LoadingView.swift in Sources */,
 				FFC96EA826A5AECB00850078 /* ClassifiedAdDetailsView.swift in Sources */,
 				FF378A7926A2403800FF6B5A /* ClassifiedAdsRepository.swift in Sources */,
 				FFC96EB226A5B00100850078 /* ClassifiedAdDetailsCoordinator.swift in Sources */,

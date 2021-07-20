@@ -32,7 +32,7 @@ struct ClassifiedAdViewModel {
     
     var publishedDateString: String {
         if let date = creationDate {
-            return String("\(localize("published")) \(longDateFormatter.string(from: date))")
+            return "\(localize("published")) \(longDateFormatter.string(from: date))"
         }
         return ""
     }

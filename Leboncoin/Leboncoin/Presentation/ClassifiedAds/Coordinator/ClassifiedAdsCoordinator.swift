@@ -39,6 +39,9 @@ extension ClassifiedAdsCoordinator: ClassifiedAdsCoordinatorInput {
     func presentCategories(_ categories: [Category], _ selectedCategories: Set<Category>, _ completion: @escaping ((Set<Category>) -> Void)) {
         let coordinator =  CategoriesCoordinator(categories, selectedCategories, completion)
         let nav =  UINavigationController(rootViewController: coordinator.viewController!)
+        nav.modalPresentationStyle = .popover
+        let popover: UIPopoverPresentationController = nav.popoverPresentationController!
+        popover.barButtonItem = viewController?.navigationItem.rightBarButtonItem
         viewController?.present(nav, animated: true, completion: nil)
     }
     

@@ -43,6 +43,10 @@ class ClassifiedAdDetailsView: UIView {
         setupDescriptionTextView()
     }
     
+    func layoutSubviews(for oriention: UIDeviceOrientation) {
+        
+    }
+    
     private func setupTitleLabel() {
         addSubview(titleLabel)
         titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 8.0).isActive = true
@@ -184,7 +188,7 @@ class ClassifiedAdDetailsView: UIView {
         textView.layer.borderWidth = 0.2
         textView.isEditable = false
         textView.textContainerInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-        let color: UIColor = .darkGray
+        let color: UIColor = .gray
         textView.layer.borderColor = color.cgColor
         return textView
     }()

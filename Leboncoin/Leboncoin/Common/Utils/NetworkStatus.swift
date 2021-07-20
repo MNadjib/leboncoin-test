@@ -75,6 +75,7 @@ class NetworkStatus {
         stopMonitoring()
     }
     
+    @discardableResult
     func startMonitoring() -> Bool {
         guard !isMonitorInvalid else { return false}
         guard !isMonitorRunning else { return false}

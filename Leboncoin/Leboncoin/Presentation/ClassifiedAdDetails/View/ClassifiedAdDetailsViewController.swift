@@ -34,4 +34,7 @@ class ClassifiedAdDetailsViewController: UIViewController {
         let classifiedAdDetailsView = ClassifiedAdDetailsView()
         view = classifiedAdDetailsView
     }
+    
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+    }
 }
