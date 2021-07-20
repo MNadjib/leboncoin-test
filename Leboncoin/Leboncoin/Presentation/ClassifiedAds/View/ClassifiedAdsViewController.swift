@@ -28,19 +28,21 @@ class ClassifiedAdsViewController: UIViewController,AlertController {
     override func loadView() {
         super.loadView()
         setupView()
-        setupSearchController()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
-        self.title = localize("ads")
     }
     
     private func setupView() {
         let classifiedAdsView = ClassifiedAdsView()
         classifiedAdsView.tableViewDataSourceDelegate = self
         view = classifiedAdsView
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: localize("categories"), style: .plain, target: self, action: #selector(categoriesTapped))
+        
+        self.title = localize("ads")
+        setupSearchController()
     }
     
     private func loadData () {
@@ -57,12 +59,16 @@ class ClassifiedAdsViewController: UIViewController,AlertController {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = localize("search")
-        
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = true
         definesPresentationContext = true
     }
     
+    @objc private func categoriesTapped() {
+        viewModel.selectCategories( callback: {[unowned self] in
+            (self.view as! ClassifiedAdsView).reloadData()
+        })
+    }
 }
 
 extension ClassifiedAdsViewController: UITableViewDelegate, UITableViewDataSource {

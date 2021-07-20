@@ -45,6 +45,11 @@
 		FF8058F3269F9A8400154E37 /* ClassifiedAdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8058F2269F9A8400154E37 /* ClassifiedAdsViewController.swift */; };
 		FF8058F9269FA10F00154E37 /* ClassifiedAdsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8058F8269FA10F00154E37 /* ClassifiedAdsViewModel.swift */; };
 		FF805901269FA14300154E37 /* ClassifiedAdsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF805900269FA14300154E37 /* ClassifiedAdsCoordinator.swift */; };
+		FF8D207426A70BED00583D97 /* CategoriesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8D207326A70BED00583D97 /* CategoriesCoordinator.swift */; };
+		FF8D207C26A70C0900583D97 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8D207B26A70C0900583D97 /* CategoriesViewModel.swift */; };
+		FF8D208126A70F7D00583D97 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8D208026A70F7D00583D97 /* CategoriesViewController.swift */; };
+		FF8D208626A70FC200583D97 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8D208526A70FC200583D97 /* CategoriesView.swift */; };
+		FF8D208B26A73BE700583D97 /* ClassifiedAdsSearchQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8D208A26A73BE700583D97 /* ClassifiedAdsSearchQuery.swift */; };
 		FFC96EA326A5ADF400850078 /* ClassifiedAdDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC96EA226A5ADF400850078 /* ClassifiedAdDetailsViewController.swift */; };
 		FFC96EA826A5AECB00850078 /* ClassifiedAdDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC96EA726A5AECB00850078 /* ClassifiedAdDetailsView.swift */; };
 		FFC96EAD26A5AFE400850078 /* ClassifiedAdDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC96EAC26A5AFE400850078 /* ClassifiedAdDetailsViewModel.swift */; };
@@ -115,6 +120,11 @@
 		FF8058F2269F9A8400154E37 /* ClassifiedAdsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdsViewController.swift; sourceTree = "<group>"; };
 		FF8058F8269FA10F00154E37 /* ClassifiedAdsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdsViewModel.swift; sourceTree = "<group>"; };
 		FF805900269FA14300154E37 /* ClassifiedAdsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdsCoordinator.swift; sourceTree = "<group>"; };
+		FF8D207326A70BED00583D97 /* CategoriesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCoordinator.swift; sourceTree = "<group>"; };
+		FF8D207B26A70C0900583D97 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
+		FF8D208026A70F7D00583D97 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		FF8D208526A70FC200583D97 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		FF8D208A26A73BE700583D97 /* ClassifiedAdsSearchQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdsSearchQuery.swift; sourceTree = "<group>"; };
 		FFC96EA226A5ADF400850078 /* ClassifiedAdDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdDetailsViewController.swift; sourceTree = "<group>"; };
 		FFC96EA726A5AECB00850078 /* ClassifiedAdDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdDetailsView.swift; sourceTree = "<group>"; };
 		FFC96EAC26A5AFE400850078 /* ClassifiedAdDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdDetailsViewModel.swift; sourceTree = "<group>"; };
@@ -364,6 +374,7 @@
 		FF8058EC269F922500154E37 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				FF8D206F26A70AED00583D97 /* Categories */,
 				FF378AF126A5791A00FF6B5A /* ClassifiedAdDetails */,
 				FF8058EF269F955000154E37 /* ClassifiedAds */,
 			);
@@ -415,6 +426,7 @@
 			children = (
 				FF8058F8269FA10F00154E37 /* ClassifiedAdsViewModel.swift */,
 				FF378AD926A4B17000FF6B5A /* ClassifiedAdViewModel.swift */,
+				FF8D208A26A73BE700583D97 /* ClassifiedAdsSearchQuery.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -423,6 +435,41 @@
 			isa = PBXGroup;
 			children = (
 				FF805900269FA14300154E37 /* ClassifiedAdsCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		FF8D206F26A70AED00583D97 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				FF8D207026A70AFC00583D97 /* View */,
+				FF8D207126A70B0400583D97 /* ViewModel */,
+				FF8D207226A70B1100583D97 /* Coordinator */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		FF8D207026A70AFC00583D97 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF8D208026A70F7D00583D97 /* CategoriesViewController.swift */,
+				FF8D208526A70FC200583D97 /* CategoriesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF8D207126A70B0400583D97 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FF8D207B26A70C0900583D97 /* CategoriesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FF8D207226A70B1100583D97 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				FF8D207326A70BED00583D97 /* CategoriesCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -558,12 +605,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF378ADA26A4B17000FF6B5A /* ClassifiedAdViewModel.swift in Sources */,
+				FF8D208B26A73BE700583D97 /* ClassifiedAdsSearchQuery.swift in Sources */,
+				FF8D207426A70BED00583D97 /* CategoriesCoordinator.swift in Sources */,
 				FF193AA226A0E13200951E4E /* Cancellable.swift in Sources */,
 				FF378A6326A23C6A00FF6B5A /* ClassifiedAd.swift in Sources */,
 				FFC96EA826A5AECB00850078 /* ClassifiedAdDetailsView.swift in Sources */,
 				FF378A7926A2403800FF6B5A /* ClassifiedAdsRepository.swift in Sources */,
 				FFC96EB226A5B00100850078 /* ClassifiedAdDetailsCoordinator.swift in Sources */,
 				FF193A9526A0E0BD00951E4E /* Endpoint.swift in Sources */,
+				FF8D208626A70FC200583D97 /* CategoriesView.swift in Sources */,
 				FF378A9926A2E9FD00FF6B5A /* PImagesRepository.swift in Sources */,
 				FF378AA226A36F2000FF6B5A /* RetrieveClassifiedAdsUseCases.swift in Sources */,
 				FF378AED26A4DA0100FF6B5A /* Category.swift in Sources */,
@@ -592,7 +642,9 @@
 				FF193AAC26A0E51000951E4E /* NetworkProvider.swift in Sources */,
 				FF378AD226A3A5C800FF6B5A /* Helper.swift in Sources */,
 				FF193AB326A0EC7300951E4E /* CategoryMapping.swift in Sources */,
+				FF8D207C26A70C0900583D97 /* CategoriesViewModel.swift in Sources */,
 				FF378AE226A4D1A500FF6B5A /* AlertController.swift in Sources */,
+				FF8D208126A70F7D00583D97 /* CategoriesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

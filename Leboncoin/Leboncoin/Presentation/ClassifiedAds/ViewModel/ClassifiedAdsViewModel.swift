@@ -7,20 +7,7 @@
 
 import UIKit
 
-enum AdStatus: String, CaseIterable {
-    case all
-    case urgent
-    case notUrgent
-    
-    func match(_ ad: ClassifiedAdViewModel) -> Bool {
-        switch self {
-        case .urgent: return ad.isUrgent
-        case .notUrgent: return !ad.isUrgent
-        default: return true
-            
-        }
-    }
-}
+
 
 protocol ClassifiedAdsViewModelInput: class {
     func retrieveData(success successCallback: @escaping (() -> Void),
@@ -32,6 +19,7 @@ protocol ClassifiedAdsViewModelInput: class {
     func categoriesTitle() -> [String]
     func filterAds(_ status: AdStatus, _ query: String?)
     func selectRow(_ index: IndexPath)
+    func selectCategories(callback: @escaping (() -> Void))
 }
 
 class ClassifiedAdsViewModel {
@@ -40,13 +28,13 @@ class ClassifiedAdsViewModel {
     private var items: [ClassifiedAdViewModel] = []
     private var filtredItems: [ClassifiedAdViewModel] = []
     private var categories:[Category] = []
-    private var coordinator:ClassifiedAdsCoordinatorInput
+    private var searchQuery = SearchQuery()
+    private var coordinator:ClassifiedAdsCoordinatorInput?
     
     init(_ useCase: ClassifiedAdsUseCases, coordinator: ClassifiedAdsCoordinatorInput) {
         self.useCase = useCase
         self.coordinator = coordinator
     }
-    
 }
 
 extension ClassifiedAdsViewModel: ClassifiedAdsViewModelInput {
@@ -85,17 +73,25 @@ extension ClassifiedAdsViewModel: ClassifiedAdsViewModelInput {
     }
     
     func filterAds(_ status: AdStatus, _ query: String?) {
+        searchQuery.adStatus = status
+        searchQuery.query = query ?? ""
         filtredItems = items.filter { ad -> Bool in
-            let query = query ?? ""
-            return status.match(ad) &&  (
-                query.isEmpty ||
-                    ad.title.range(of: query, options: [.diacriticInsensitive, .caseInsensitive]) != nil ||
-                    ad.categoryName.range(of: query, options: [.diacriticInsensitive, .caseInsensitive]) != nil)
+            searchQuery.match(ad)
         }
     }
     
     func selectRow(_ index: IndexPath) {
         let item = filtredItems[index.row]
-        coordinator.presentClassifiedAdDetails(item)
+        coordinator?.presentClassifiedAdDetails(item)
+    }
+    
+    func selectCategories(callback:@escaping (() -> Void)) {
+        coordinator?.presentCategories(categories, searchQuery.categories, { [unowned self] cats in
+            self.searchQuery.categories = cats
+            self.filtredItems = self.items.filter { ad -> Bool in
+                self.searchQuery.match(ad)
+            }
+            callback()
+        })
     }
 }

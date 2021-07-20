@@ -71,7 +71,6 @@ class ClassifiedAdTableViewCell: UITableViewCell {
         urgentIcon.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -8.0).isActive = true
         urgentIcon.widthAnchor.constraint(equalToConstant: 18).isActive = true
         urgentIcon.heightAnchor.constraint(equalToConstant:18).isActive = true
-        
     }
     
     private func setupDateLabel () {

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ClassifiedAdDetailsViewModelInput: class {
-    var classifiedAdItem:ClassifiedAdViewModel {get}
+    var classifiedAdItem: ClassifiedAdViewModel {get}
 }
 
 class ClassifiedAdDetailsViewModel {

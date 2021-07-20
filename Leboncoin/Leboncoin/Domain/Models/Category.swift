@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Category {
+struct Category: Hashable {
     var id: Int64
     var name: String
 }

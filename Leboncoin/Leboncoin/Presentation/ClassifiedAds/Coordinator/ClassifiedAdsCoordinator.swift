@@ -9,6 +9,7 @@ import UIKit
 
 protocol ClassifiedAdsCoordinatorInput: class {
     func presentClassifiedAdDetails(_ model: ClassifiedAdViewModel)
+    func presentCategories(_ categories: [Category], _ selectedCategories: Set<Category>, _ completion: @escaping ((Set<Category>) -> Void))
 }
 
 class ClassifiedAdsCoordinator {
@@ -35,6 +36,12 @@ class ClassifiedAdsCoordinator {
 }
 
 extension ClassifiedAdsCoordinator: ClassifiedAdsCoordinatorInput {
+    func presentCategories(_ categories: [Category], _ selectedCategories: Set<Category>, _ completion: @escaping ((Set<Category>) -> Void)) {
+        let coordinator =  CategoriesCoordinator(categories, selectedCategories, completion)
+        let nav =  UINavigationController(rootViewController: coordinator.viewController!)
+        viewController?.present(nav, animated: true, completion: nil)
+    }
+    
     func presentClassifiedAdDetails(_ model: ClassifiedAdViewModel) {
         let coordinator =  ClassifiedAdDetailsCoordinator(model)
         viewController?.navigationController?.pushViewController(coordinator.viewController!, animated: true)

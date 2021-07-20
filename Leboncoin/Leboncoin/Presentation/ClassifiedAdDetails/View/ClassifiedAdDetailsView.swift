@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ClassifiedAdDetailsView: UIScrollView {
+class ClassifiedAdDetailsView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -64,7 +64,6 @@ class ClassifiedAdDetailsView: UIScrollView {
         urgentLabel.leadingAnchor.constraint(equalTo:urgentIcon.trailingAnchor, constant: 8.0).isActive = true
         urgentLabel.trailingAnchor.constraint(equalTo:safeAreaLayoutGuide.trailingAnchor, constant: -8.0).isActive = true
     }
-    
     
     private func setupImageView() {
         addSubview(imageView)
