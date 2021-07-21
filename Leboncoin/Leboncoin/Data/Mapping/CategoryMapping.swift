@@ -11,4 +11,8 @@ import UIKit
 struct CategoryMapping: Decodable {
     var id: Int64
     var name: String
+    
+    func toModel() -> Category {
+        Category(id: id, name: name)
+    }
 }

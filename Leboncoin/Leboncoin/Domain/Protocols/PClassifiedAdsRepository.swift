@@ -11,5 +11,5 @@ protocol PClassifiedAdsRepository {
     typealias Completion = (Result<[ClassifiedAd], Error>) -> Void
     
     @discardableResult
-    func retrieveClassifiedAds(_ completion: @escaping Completion) -> Cancellable
+    func retrieveData(_ completion: @escaping Completion) -> Cancellable?
 }

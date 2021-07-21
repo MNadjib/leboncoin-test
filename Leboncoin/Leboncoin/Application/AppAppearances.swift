@@ -9,6 +9,5 @@ import UIKit
 
 final class AppAppearances {
     static func setupAppearance() {
-        
     }
 }

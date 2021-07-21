@@ -36,7 +36,7 @@ enum Environment {
         }
     }
     
-    var value: String{
+    var value: String {
         return (infoDict[self.plistKey] as! String).replacingOccurrences(of: "\\", with: "")
     }
 }

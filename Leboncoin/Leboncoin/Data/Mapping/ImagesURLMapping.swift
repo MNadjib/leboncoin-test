@@ -8,6 +8,10 @@
 import UIKit
 
 struct ImagesURLMapping: Decodable {
-    var small: String
-    var type: String
+    var small: String?
+    var thumb: String?
+    
+    func toModel() -> ImageUrl {
+        ImageUrl(small: small, thumb: thumb)
+    }
 }

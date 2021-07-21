@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         AppAppearances.setupAppearance()
         
+        setupNetworkMonitoring()
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         let navigationController = UINavigationController()
         window?.rootViewController = navigationController
@@ -27,6 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         return true
+    }
+    
+    private func setupNetworkMonitoring() {
+        NetworkStatus.shared.startMonitoring()
     }
 }
 
