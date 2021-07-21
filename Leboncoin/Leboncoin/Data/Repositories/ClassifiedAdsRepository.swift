@@ -11,9 +11,9 @@ class ClassifiedAdsRepository {
     
     typealias Completion = ( Swift.Result<[ClassifiedAd], Error>) -> Void
     
-    private let provider: NetworkProvider
+    private let provider: NetworkProviderInput
     
-    init(_ provider: NetworkProvider) {
+    init(_ provider: NetworkProviderInput) {
         self.provider = provider
     }
 }

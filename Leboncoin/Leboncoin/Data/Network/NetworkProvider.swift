@@ -7,8 +7,18 @@
 
 import UIKit
 
-class NetworkProvider {
+
+protocol NetworkProviderInput {
+    typealias Completion = ( Swift.Result<Data?, Error>) -> Void
     
+    @discardableResult
+    func request(_ endpoint: EndpointCases, _ completion: @escaping Completion) -> Cancellable?
+}
+
+class NetworkProvider {}
+
+extension NetworkProvider: NetworkProviderInput  {
+
     typealias Completion = ( Swift.Result<Data?, Error>) -> Void
     
     @discardableResult

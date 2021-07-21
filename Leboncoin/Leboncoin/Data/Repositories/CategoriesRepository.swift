@@ -9,9 +9,9 @@ import UIKit
 
 class CategoriesRepository {
     typealias Completion = (Result<[Category], Error>) -> Void
-    private let provider: NetworkProvider
+    private let provider: NetworkProviderInput
     
-    init(_ provider: NetworkProvider) {
+    init(_ provider: NetworkProviderInput) {
         self.provider = provider
     }
 }
@@ -23,7 +23,7 @@ extension CategoriesRepository: PCategoriesRepository {
             switch result {
             case .success(let data):
                 do {
-                    if let data = data {
+                    if let data = data  {
                         let catsMapping = try JSONDecoder().decode([CategoryMapping].self, from: data)
                         let categories = catsMapping.map { catMapping -> Category in
                             catMapping.toModel()
